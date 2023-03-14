@@ -1,10 +1,12 @@
-import React from 'react';
+import { Component } from 'react';
 import { Modal } from 'components/Modal/Modal';
 import PropTypes from 'prop-types';
 import { GalleryItem, Image } from './ImageGalleryItem.styled';
 
-export class ImageGalleryItem extends React.Component {
-  state = { isModalOpen: false };
+export class ImageGalleryItem extends Component {
+  state = {
+    isModalOpen: false
+  };
 
   toggleModal = () => {
     this.setState(prevState => ({ isModalOpen: !prevState.isModalOpen }));
